@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_sample_mvp/air_quality/presenter/air_quality_presenter.dart';
 import 'package:flutter_sample_mvp/air_quality/presenter/air_quality_presenter_impl.dart';
 import 'package:flutter_sample_mvp/air_quality/view/%20air_quality_view.dart';
@@ -32,11 +31,10 @@ class _AirQualityPageState extends State<AirQualityPage>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('$info'),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                  'Low air pollution forecast valid from Thursday 13 October to end of Friday 14 October GMT'),
+            Image.asset('icons/flags/png/gb.png', package: 'country_icons'),
+            Padding(
+              padding: const EdgeInsets.all(38.0),
+              child: Text('$info'),
             ),
             ElevatedButton(
                 onPressed: () {
